@@ -1,0 +1,8 @@
+Flask
+sqlalchemy
+flask-sqlalchemy
+pymysql
+gunicorn
+python-dotenv
+pytest
+pytest-flask

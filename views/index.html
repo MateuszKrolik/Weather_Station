@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='esp-style.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <header class="header">
+    <h1>📊 ESP Weather Station</h1>
+    <form method="get">
+      <input
+        type="number"
+        name="readingsCount"
+        min="1"
+        placeholder="Number of readings ({{ readings_count }})"
+      />
+      <input type="submit" value="UPDATE" />
+    </form>
+  </header>
+  <body>
+    <p>Last reading: {{ last_reading_time }}</p>
+    <div class="container">
+      <div class="box gauge--1">
+        <h2>Temperature</h2>
+        <div class="mask">
+          <div class="semi-circle"></div>
+          <div class="semi-circle--mask"></div>
+        </div>
+        <p id="temp">{{ last_reading_temp }} °C</p>
+        <p>Min: {{ min_temp }} °C</p>
+        <p>Max: {{ max_temp }} °C</p>
+        <p>Avg: {{ avg_temp }} °C</p>
+      </div>
+      <div class="box gauge--2">
+        <h2>Humidity</h2>
+        <div class="mask">
+          <div class="semi-circle"></div>
+          <div class="semi-circle--mask"></div>
+        </div>
+        <p id="humi">{{ last_reading_humi }} %</p>
+        <p>Min: {{ min_humi }} %</p>
+        <p>Max: {{ max_humi }} %</p>
+        <p>Avg: {{ avg_humi }} %</p>
+      </div>
+    </div>
+    <table cellspacing="5" cellpadding="5" id="tableReadings">
+      <tr>
+        <th>ID</th>
+        <th>Sensor</th>
+        <th>Location</th>
+        <th>Temperature (ºC)</th>
+        <th>Humidity (%)</th>
+        <th>Pressure (hPa)</th>
+        <th>Timestamp</th>
+      </tr>
+      {% for reading in readings %}
+      <tr>
+        <td>{{ reading.id }}</td>
+        <td>{{ reading.sensor }}</td>
+        <td>{{ reading.location }}</td>
+        <td>{{ reading.temperature }}</td>
+        <td>{{ reading.humidity }}</td>
+        <td>{{ reading.pressure }}</td>
+        <td>{{ reading.reading_time }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <script>
+      var temperature = {{ last_reading_temp }};
+      var humidity = {{ last_reading_humi }};
+      setTemperature(temperature);
+      setHumidity(humidity);
+
+      function setTemperature(curVal){
+          var minTemp = -5.0;
+          var maxTemp = 38.0;
+
+          var newVal = scaleValue(curVal, [minTemp, maxTemp], [0, 180]);
+          $('.gauge--1 .semi-circle--mask').attr({
+              style: '-webkit-transform: rotate(' + newVal + 'deg);' +
+              '-moz-transform: rotate(' + newVal + 'deg);' +
+              'transform: rotate(' + newVal + 'deg);'
+          });
+          $("#temp").text(curVal + ' ºC');
+      }
+
+      function setHumidity(curVal){
+          var minHumi = 0;
+          var maxHumi = 100;
+
+          var newVal = scaleValue(curVal, [minHumi, maxHumi], [0, 180]);
+          $('.gauge--2 .semi-circle--mask').attr({
+              style: '-webkit-transform: rotate(' + newVal + 'deg);' +
+              '-moz-transform: rotate(' + newVal + 'deg);' +
+              'transform: rotate(' + newVal + 'deg);'
+          });
+          $("#humi").text(curVal + ' %');
+      }
+
+      function scaleValue(value, from, to) {
+          var scale = (to[1] - to[0]) / (from[1] - from[0]);
+          var capped = Math.min(from[1], Math.max(from[0], value)) - from[0];
+          return ~~(capped * scale + to[0]);
+      }
+    </script>
+  </body>
+</html>
