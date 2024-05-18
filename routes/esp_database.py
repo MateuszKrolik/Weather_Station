@@ -1,4 +1,4 @@
-#routes/esp_database.py
+#./routes/esp_database.py
 from flask import render_template, request
 from controllers.esp_database import insert_reading, get_last_reading, min_max_avg_reading, get_all_readings
 from extensions import API_KEY_VALUE
@@ -12,9 +12,12 @@ def initialize_routes(app):
 
         sensor = request.form.get('sensor', '')
         location = request.form.get('location', '')
-        temperature = request.form.get('temperature', '')
-        humidity = request.form.get('humidity', '')
-        pressure = request.form.get('pressure', '')
+        try:
+            temperature = float(request.form.get('temperature', '0'))
+            humidity = float(request.form.get('humidity', '0'))
+            pressure = float(request.form.get('pressure', '0'))
+        except ValueError:
+            return "Invalid temperature, humidity, or pressure value."
 
         result = insert_reading(sensor, location, temperature, humidity, pressure)
         return str(result)

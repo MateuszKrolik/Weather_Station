@@ -13,14 +13,10 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /
 
-# Download dependencies as a separate step to take advantage of Docker's caching.
-# Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
-# Leverage a bind mount to requirements.txt to avoid having to copy them into
-# into this layer.
-RUN --mount=type=cache,target=/root/.cache/pip \
-    --mount=type=bind,source=requirements.txt,target=requirements.txt \
-    python -m pip install -r requirements.txt
+# Copy the requirements file into the Docker image.
+COPY requirements.txt .
 
+RUN python -m pip install -r requirements.txt
 
 # Copy the source code into the container.
 COPY . .
@@ -28,5 +24,11 @@ COPY . .
 # Expose the port that the application listens on.
 EXPOSE 5001
 
-# Run the application.
-CMD gunicorn 'app:app' --bind=0.0.0.0:5001
+# Set the PORT environment variable
+ENV PORT=5001
+
+# Run the web service on container startup. Here we use the gunicorn
+# webserver, with one worker process and 8 threads.
+# For environments with multiple CPU cores, increase the number of workers
+# to be equal to the cores available.
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 "app:create_app()"
