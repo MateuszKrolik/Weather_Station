@@ -10,4 +10,4 @@ CREATE TABLE sensor_data (
     humidity FLOAT,
     pressure FLOAT,
     reading_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-)
+);

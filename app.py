@@ -25,4 +25,4 @@ def create_app(test_config=None):
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5001)), debug=os.environ.get('DEBUG', 'True') != 'False')
+    app.run(host=(os.environ.get('HOST', '0.0.0.0')), port=int(os.environ.get('PORT', 5001)), debug=os.environ.get('DEBUG', 'True') != 'False')

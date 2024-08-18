@@ -59,7 +59,7 @@
 
 ### Click below gif to open the WebSite 😁
 
-#### PS. I changed the API_KEY_VALUE logged to the below Arduino IDE Serial Monitor right after recording this video, so don't worry about security, it's there! 😉 
+#### PS. I changed the API_KEY_VALUE logged to the below Arduino IDE Serial Monitor right after recording this video, so don't worry about security, it's there! 😉
 
 [![Product Name Screen Shot][product-screenshot]](https://mkrolik-weather-station-cd6128b-577vxatqwa-ew.a.run.app/)
 
@@ -77,70 +77,71 @@
 
 <!-- Primary Technologies -->
 
--   [![MVC][MVC]][MVC-url]
--   [![Arduino][Arduino]][Arduino-url]
+- [![MVC][MVC]][MVC-url]
+- [![Arduino][Arduino]][Arduino-url]
 
 <!-- Programming Languages -->
 
--   [![C][C]][C-url]
--   [![C++][C++]][C++-url]
--   [![Python][Python]][Python-url]
--   [![JavaScript][JavaScript]][JavaScript-url]
+- [![C][C]][C-url]
+- [![C++][C++]][C++-url]
+- [![Python][Python]][Python-url]
+- [![JavaScript][JavaScript]][JavaScript-url]
 
 <!-- Web Technologies -->
 
--   [![Flask][Flask]][Flask-url]
--   [![Jinja2][Jinja2]][Jinja2-url]
--   [![jQuery][jQuery]][jQuery-url]
--   [![Gunicorn][Gunicorn]][Gunicorn-url]
--   [![HTML5][HTML5]][HTML5-url]
--   [![CSS3][CSS3]][CSS3-url]
+- [![Flask][Flask]][Flask-url]
+- [![Jinja2][Jinja2]][Jinja2-url]
+- [![jQuery][jQuery]][jQuery-url]
+- [![Gunicorn][Gunicorn]][Gunicorn-url]
+- [![HTML5][HTML5]][HTML5-url]
+- [![CSS3][CSS3]][CSS3-url]
 
 <!-- Database Technologies -->
 
--   [![SQLAlchemy][SQLAlchemy]][SQLAlchemy-url]
--   [![MySQL][MySQL]][MySQL-url]
--   [![SQLite][SQLite]][SQLite-url]
--   [![SQL][SQL]][SQL-url]
+- [![SQLAlchemy][SQLAlchemy]][SQLAlchemy-url]
+- [![MySQL][MySQL]][MySQL-url]
+- [![SQLite][SQLite]][SQLite-url]
+- [![SQL][SQL]][SQL-url]
 
 <!-- Testing and Version Control -->
 
--   [![Pytest][Pytest]][Pytest-url]
--   [![JUnit][JUnit]][JUnit-url]
--   [![GitHub Actions][GitHub Actions]][GitHub Actions-url]
+- [![Pytest][Pytest]][Pytest-url]
+- [![JUnit][JUnit]][JUnit-url]
+- [![GitHub Actions][GitHub Actions]][GitHub Actions-url]
 
 <!-- Containerization -->
 
--   [![Docker][Docker]][Docker-url]
--   [![Linux/Unix][Linux/Unix]][Linux/Unix-url]
--   [![Bash][Bash]][Bash-url]
+- [![Docker][Docker]][Docker-url]
+- [![Linux/Unix][Linux/Unix]][Linux/Unix-url]
+- [![Bash][Bash]][Bash-url]
 
 <!-- Cloud Technologies -->
 
--   [![GCP Cloud Build][GCP Cloud Build]][GCP Cloud Build-url]
--   [![GCP Artifact Registry][GCP Artifact Registry]][GCP Artifact Registry-url]
--   [![GCP Cloud Run][GCP Cloud Run]][GCP Cloud Run-url]
--   [![GCP Cloud SQL][GCP Cloud SQL]][GCP Cloud SQL-url]
--   [![Google Cloud Platform][Google Cloud Platform]][Google Cloud Platform-url]
--   [![Google Cloud Storage][Google Cloud Storage]][Google Cloud Storage-url]
--   [![GCP Secret Manager][GCP Secret Manager]][GCP Secret Manager-url]
--   [![GCP IAM][GCP IAM]][GCP IAM-url]
+- [![GCP Compute Engine][GCP Compute Engine]][GCP Compute Engine-url]
+- [![GCP Cloud Build][GCP Cloud Build]][GCP Cloud Build-url]
+- [![GCP Artifact Registry][GCP Artifact Registry]][GCP Artifact Registry-url]
+- [![GCP Cloud Run][GCP Cloud Run]][GCP Cloud Run-url]
+- [![GCP Cloud SQL][GCP Cloud SQL]][GCP Cloud SQL-url]
+- [![Google Cloud Platform][Google Cloud Platform]][Google Cloud Platform-url]
+- [![Google Cloud Storage][Google Cloud Storage]][Google Cloud Storage-url]
+- [![GCP Secret Manager][GCP Secret Manager]][GCP Secret Manager-url]
+- [![GCP IAM][GCP IAM]][GCP IAM-url]
 
 <!-- Data Formats -->
 
--   [![YAML][YAML]][YAML-url]
--   [![XML][XML]][XML-url]
--   [![JSON][JSON]][JSON-url]
--   [![.env][.env]][.env-url]
+- [![YAML][YAML]][YAML-url]
+- [![XML][XML]][XML-url]
+- [![JSON][JSON]][JSON-url]
+- [![.env][.env]][.env-url]
 
 <!-- IDEs and Editors -->
 
--   [![VSCode][VSCode]][VSCode-url]
--   [![Anaconda][Anaconda]][Anaconda-url]
+- [![VSCode][VSCode]][VSCode-url]
+- [![Anaconda][Anaconda]][Anaconda-url]
 
 <!-- Other Technologies -->
 
--   [![FFmpeg][FFmpeg]][FFmpeg-url]
+- [![FFmpeg][FFmpeg]][FFmpeg-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -155,20 +156,20 @@ For a Smooth DataBase management experience also consider using MySQL WorkBench.
 ### Installation
 
 1. Clone the repo
-    ```sh
-    git clone https://github.com/MateuszKrolik/Weather_Station.git
-    ```
+   ```sh
+   git clone https://github.com/MateuszKrolik/Weather_Station.git
+   ```
 2. Install Build Image w/ Docker-Compose
-    ```sh
-    docker-compose up --build
-    ```
+   ```sh
+   docker-compose up --build
+   ```
 3. Enter your environment variables in `.env` and `GCP Secret Manager`.
-    ```sh
-    API_KEY_VALUE = "ENTER YOUR API_KEY_VALUE";
-    SQLALCHEMY_DATABASE_URI = "ENTER YOUR SQLALCHEMY_DATABASE_URI";
-    DEBUG = "ENTER YOUR DEBUG";
-    PORT = "ENTER YOUR PORT";
-    ```
+   ```sh
+   API_KEY_VALUE = "ENTER YOUR API_KEY_VALUE";
+   SQLALCHEMY_DATABASE_URI = "ENTER YOUR SQLALCHEMY_DATABASE_URI";
+   DEBUG = "ENTER YOUR DEBUG";
+   PORT = "ENTER YOUR PORT";
+   ```
 4. When deploying remember to create a GitHub master branch trigger in GCP Cloud Build, and don't forget to set all the necessary IAM Roles
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -182,7 +183,8 @@ To test these out yourself visit this [Link](https://mkrolik-weather-station-cd6
 
 https://github.com/MateuszKrolik/Weather_Station/assets/127691471/d18b9f88-3dbb-4262-a711-e40395bb4325
 
-### PS. I changed the API_KEY_VALUE logged to the below Arduino IDE Serial Monitor right after recording this video, so don't worry about security, it's there! 😉 
+### PS. I changed the API_KEY_VALUE logged to the below Arduino IDE Serial Monitor right after recording this video, so don't worry about security, it's there! 😉
+
 https://github.com/MateuszKrolik/Weather_Station/assets/127691471/e26560c6-0a08-4906-9ffe-0670d175656b
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -191,46 +193,47 @@ https://github.com/MateuszKrolik/Weather_Station/assets/127691471/e26560c6-0a08-
 
 ## Roadmap
 
--   [x] Weather Station BreadBoard Circuit and Arduino Sketch via:
-    -   [x] ESP8266 WiFi Module Board
-    -   [x] BME280 Temp, Hum & Press Sensor
-    -   [x] I2C Bus
-    -   [x] Arduino IDE
-    -   [x] C/C++ Languages
-    -   [x] Adafruit+BME280 Libraries
--   [x] Monolithic Architecture: Model-View-Controller (MVC)
--   [x] Containerization via Docker and Docker-Compose
--   [x] Design Patterns (Application Factory)
--   [x] Python3 Flask Web Framework
--   [x] Python3 Gunicorn Production WebServer
--   [x] Anaconda Navigator Python3 Virtual Environment Management
--   [x] Jinja2 Dynamic HTML Templating Engine
--   [x] JavaScript+JQuery Responsive Temperature and Humidity Gauges
--   [x] Cross-Origin-Resource-Sharing(CORS)
--   [x] Hosted GCP Cloud SQL MySQL DataBase Instance
--   [x] Create-Read-Update-Delete (CRUD) Functionality
--   [x] SQLAlchemy Object-Relational-Mapper (ORM)
--   [x] Test-Driven-Development(TDD) - Unit and Integration via:
-    -   [x] PyTest
-    -   [x] SQLite In-Memory Mock Database
--   [x] Visualized MySQL Schema (WorkBench Reverse-Engineering Feature)
--   [x] Error Handling
--   [x] Environment Variables for Securing Sensitive Data
--   [x] SSL/TLS Encryption
--   [x] Object Storage (Google Cloud Storage)
--   [x] Multithreading
--   [x] Infrastructure-as-Code (IaC) via CloudBuild YAML file
--   [x] Automatized Dockerized CI/CD&IaC Serverless Deployment via:
-    -   [x] GitHub Master Branch Commit Trigger
-    -   [x] GCP Cloud Build (IaC & CI/CD)
-    -   [x] GCP Cloud Run (FaaS/PaaS)
-    -   [x] GCP Artifact Registry
-    -   [x] GCP Cloud Storage for JUnit XML PyTest Logs
-    -   [x] GCP Secret Manager (.ENV)
-    -   [x] GCP IAM Roles (Least Priveleged Principle)
--   [x] Best Practices
--   [x] CSS3 Media Query Mobile Responsiveness
--   [x] FFmpeg for Video-to-GIF Conversion
+- [x] Weather Station BreadBoard Circuit and Arduino Sketch via:
+  - [x] ESP8266 WiFi Module Board
+  - [x] BME280 Temp, Hum & Press Sensor
+  - [x] I2C Bus
+  - [x] Arduino IDE
+  - [x] C/C++ Languages
+  - [x] Adafruit+BME280 Libraries
+- [x] Monolithic Architecture: Model-View-Controller (MVC)
+- [x] Containerization via Docker and Docker-Compose
+- [x] Design Patterns (Application Factory)
+- [x] Python3 Flask Web Framework
+- [x] Python3 Gunicorn Production WebServer
+- [x] Anaconda Navigator Python3 Virtual Environment Management
+- [x] Jinja2 Dynamic HTML Templating Engine
+- [x] JavaScript+JQuery Responsive Temperature and Humidity Gauges
+- [x] Cross-Origin-Resource-Sharing(CORS)
+- [x] Hosted GCP Cloud SQL MySQL DataBase Instance
+- [x] Create-Read-Update-Delete (CRUD) Functionality
+- [x] SQLAlchemy Object-Relational-Mapper (ORM)
+- [x] Test-Driven-Development(TDD) - Unit and Integration via:
+  - [x] PyTest
+  - [x] SQLite In-Memory Mock Database
+- [x] Visualized MySQL Schema (WorkBench Reverse-Engineering Feature)
+- [x] Error Handling
+- [x] Environment Variables for Securing Sensitive Data
+- [x] SSL/TLS Encryption
+- [x] Object Storage (Google Cloud Storage)
+- [x] Multithreading
+- [x] Infrastructure-as-Code (IaC) via CloudBuild YAML file
+- [x] Infrastracture-as-a-Service (IaaS) via GCP Compute Engine + SSH Protocol + DockerEngine + MySQL
+- [x] Automatized Dockerized CI/CD&IaC Serverless Deployment via:
+  - [x] GitHub Master Branch Commit Trigger
+  - [x] GCP Cloud Build (IaC & CI/CD)
+  - [x] GCP Cloud Run (FaaS/PaaS)
+  - [x] GCP Artifact Registry
+  - [x] GCP Cloud Storage for JUnit XML PyTest Logs
+  - [x] GCP Secret Manager (.ENV)
+  - [x] GCP IAM Roles (Least Priveleged Principle)
+- [x] Best Practices
+- [x] CSS3 Media Query Mobile Responsiveness
+- [x] FFmpeg for Video-to-GIF Conversion
 
 See the [open issues](https://github.com/MateuszKrolik/Weather_Station/issues) for a full list of proposed features (and known issues).
 
@@ -277,11 +280,11 @@ GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKroli
 
 ## Acknowledgments
 
--   [Img Shields](https://shields.io)
--   [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
--   [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
--   [Malven's Grid Cheatsheet](https://grid.malven.co/)
--   [SVG Repo](https://www.svgrepo.com/)
+- [Img Shields](https://shields.io)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
+- [Malven's Grid Cheatsheet](https://grid.malven.co/)
+- [SVG Repo](https://www.svgrepo.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -377,3 +380,5 @@ GitHub Repository Link: [GitHub Repository Link](https://github.com/MateuszKroli
 [Gunicorn-url]: https://gunicorn.org/
 [FFmpeg]: https://img.shields.io/badge/FFmpeg-007ACC?style=for-the-badge&logo=ffmpeg&logoColor=white
 [FFmpeg-url]: https://ffmpeg.org/
+[GCP Compute Engine]: https://img.shields.io/badge/Google_Compute_Engine-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
+[GCP Compute Engine-url]: https://cloud.google.com/compute
